@@ -1,0 +1,37 @@
+# Introduction to AI using Python
+
+# Printing a message
+print("Hello, World!")
+
+# Taking user input
+txt = input("Type something to test this out: ")
+print("You typed:", txt)
+
+# Demonstrating data types
+num = 10  # Integer
+flt = 10.5  # Float
+txt = "Python"  # String
+boolean_val = True  # Boolean
+
+print("Integer:", num)
+print("Float:", flt)
+print("String:", txt)
+print("Boolean:", boolean_val)
+
+# Conditional Statement Example
+a = 5
+b = 10
+if b > a:
+    print("b is greater than a")
+
+# List Example
+color_list = ["Red", "Blue", "Green", "Black"]
+print("First color:", color_list[0])  # Accessing list element
+
+# String Slicing
+string1 = "PYTHON TUTORIAL"
+print("Sliced string:", string1[3:7])  # Outputs 'HON '
+
+# Loop Example
+for color in color_list:
+    print("Color:", color)
