@@ -1,0 +1,92 @@
+#Question 1
+class Stack:
+    def _init_(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+        print(f"Pushed: {item}")
+
+    def pop(self):
+        if self.is_empty():
+            return "Stack is empty"
+        return f"Popped: {self.items.pop()}"
+
+    def peek(self):
+        if self.is_empty():
+            return "Stack is empty"
+        return f"Top element: {self.items[-1]}"
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def display(self):
+        return f"Stack (top to bottom): {self.items[::-1]}"
+
+
+# Example usage:
+s = Stack()
+s.push(10)
+s.push(20)
+s.push(30)
+
+print(s.pop())
+print(s.peek())
+print(s.display())
+
+#Question 2
+class Queue:
+    def _init_(self):
+        self.items = []
+
+    def enqueue(self, item):
+        self.items.append(item)
+        print(f"Enqueued: {item}")
+
+    def dequeue(self):
+        if self.is_empty():
+            return "Queue is empty"
+        return f"Dequeued: {self.items.pop(0)}"
+
+    def peek(self):
+        if self.is_empty():
+            return "Queue is empty"
+        return f"Front element: {self.items[0]}"
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def display(self):
+        return f"Queue (front to rear): {self.items}"
+
+
+# Example usage:
+q = Queue()
+q.enqueue("Aleena")
+q.enqueue("Alina")
+q.enqueue("Ayesha")
+
+print(q.dequeue())
+print(q.peek())
+print(q.display())
+
+#Question 3
+def binary_search(arr, target):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if arr[mid] == target:
+            return f"Found at index {mid}"
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    return "Not found"
+
+# Example usage
+numbers = [10, 20, 30, 40, 50, 60, 70]
+print(binary_search(numbers, 40))   # Output: Found at index 3
